@@ -16,7 +16,6 @@ class Config:
         self.data_dir = data_dir if data_dir is not None else '/data/' + self.dataset
 
 #*********************Added Code to Distinguish Between the Many Created Sofa Files************************************************************************    
-  
         self.generated_sofa_folder_name = generated_sofa_folder_name if generated_sofa_folder_name is not None else ''
 #********************* End of Added Code to Distinguish Between the Many Created Sofa Files************************************************************************    
        
@@ -57,9 +56,7 @@ class Config:
         self.existing_model_path = f'{self.data_dirs_path}{self.runs_folder}/{self.existing_model_tag}'
         
 #*************************Added Code to specify the valdi path in the jobs .pbs file***********************************************************************
-        
-        self.valid_path = f'{self.data_dirs_path}{self.runs_folder}/{self.tag}/valid'+generated_sofa_folder_name
-        
+        self.valid_path = f'{self.data_dirs_path}{self.runs_folder}/{self.tag}/valid'+generated_sofa_folder_name        
 #*************************End of Added Code to specify the valdi path in the jobs .pbs file***********************************************************************
         
         self.model_path = f'{self.data_dirs_path}{self.runs_folder}/{self.tag}'
@@ -74,18 +71,12 @@ class Config:
 
         self.train_hrtf_merge_dir = self.data_dirs_path + self.data_dir + '/hr_merge/train'
 
-        #*********************Added Code to Specify the Train Folder in the Job .pbs File************************************************************************   
-           
+        #*********************Added Code to Specify the Train Folder in the Job .pbs File************************************************************************     
         self.train_noisy_hrtf_merge_dir = self.data_dirs_path + self.data_dir + '/hr_merge_noisy/' + self.train_folder
-
         #*********************End of Added Code to Specify the Train Folder in the Job .pbs File************************************************************************    
-        
         self.valid_hrtf_merge_dir = self.data_dirs_path + self.data_dir + '/hr_merge/valid'
-        
         #*********************Added Code to Specify Merged Valid Noisy Files************************************************************************      
-        
         self.valid_noisy_hrtf_merge_dir = self.data_dirs_path + self.data_dir + '/hr_merge_noisy/' + self.validation_folder
-
         #*********************End of Added Code to Specify Merged Valid Noisy Files************************************************************************         
         
         self.train_original_hrtf_merge_dir = self.data_dirs_path + self.data_dir + '/merge_original/train'
