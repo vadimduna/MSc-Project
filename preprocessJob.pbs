@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -l walltime=06:00:00
+#PBS -l select=1:ncpus=4:mem=24gb
+
+module load anaconda3/personal
+module load tools/prod
+module load MATLAB/2023a_Update_3
+module load SciPy-bundle/2023.02-gfbf-2022b
+
+source activate pytorch_env
+
+cd $PBS_O_WORKDIR
+
+
+
+python HRTF-upsampling-with-a-generative-adversarial-network-using-a-gnomonic-equiangular-projection-main/main.py preprocess --hpc True --tag ari-upscale-4
