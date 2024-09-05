@@ -1,38 +1,10 @@
-# HRTF upsampling with a generative adversarial network using a gnomonic equiangular projection
+# HRTF upsampling with a generative adversarial network using a gnomonic equiangular projection noise processing extensions
 
+This code is an extension of the code found here: https://github.com/ahogg/HRTF-upsampling-with-a-generative-adversarial-network-using-a-gnomonic-equiangular-projection
+The original code base was part of the following research paper:
 
 A. O. T. Hogg, M. Jenkins, H. Liu, I. Squires, S. J. Cooper and L. Picinali: HRTF upsampling with a generative adversarial network using a gnomonic equiangular projection. *In: Proc. IEEE/ACM Transactions on Audio Speech and Language Processing (submitted)*.
 
-First, run:
-> Note: generate_projection only needs to be run once per dataset.
-```sh
-main.py generate_projection --hpc False --tag ari-upscale-4
-```
-to find the barycentric coordinates for each point in the cubed sphere. The --tag flag specifies the folder location of the results, and the --hpc flag changes the paths depending on whether the code is being executed remotely or locally (see the config.py).
+Additions to the code have been marked with ****....Added Code*... and ****...End Added Code*...
 
-Next run:
-```sh
-main.py preprocess --hpc False --tag ari-upscale-4
-```
-which interpolates data to find the HRIRs on the cubed sphere. It then obtains the HRTFs using the FFT and splits the data into train and validation sets. 
-
-Then to train the GAN on the cubed sphere data run: 
-```sh
-main.py train --hpc False --tag ari-upscale-4
-```
-> Note: The training parameters can be modified in the config.py file.
-
-To test the GAN on the valuation set run:
-```sh
-main.py test --hpc False --tag ari-upscale-4
-```
-
-To compare the performance against the barycentric baseline and the HRTF selection baseline run:
-```sh
-main.py barycentric_baseline --hpc False 
-```
-and 
-```sh
-main.py hrtf_selection_baseline --hpc False
-```
-respectively.
+In addition, this repository contains Jupyter Notebooks used for noise generation, graphs, and another Python file used for localization calcuations that again extends the original code. 
