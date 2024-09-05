@@ -1,0 +1,10 @@
+,Noisy HRTF,Pink-Trained-Generated HRTFs,Brown-Trained-Generated HRTFs,White-Trained-Generated HRTFs,"High-SNR-Train-Generated HRTFs (30dB, 20dB)","Low-SNR-Train-Generated HRTFs (10dB, 0dB, -10dB, -20dB)"
+Average Mean Polar Accuracy  (°),0.130,-19.141,-20.057,-17.968,-9.531,-21.592
+Max Mean Polar Accuracy In Magnitude (°) ,-5.078,-62.670,-68.948,-64.627,-39.117,-58.869
+Min Mean Polar Accuracy In Magnitude (°),0.027,-3.536,-1.530,-0.994,-1.766,-3.948
+Average Mean Polar RMS Error (°),36.756,40.359,40.524,40.225,38.724,40.584
+Max Mean Polar RMS Error (°),42.464,47.283,47.655,47.752,45.940,46.664
+Min Mean Polar RMS Error (°),32.341,37.346,37.434,37.245,37.265,37.375
+Average Mean Quadrant Error (%),12.761,23.095,24.090,21.912,17.082,25.209
+Max Mean Quadrant Error (%),22.620,44.371,45.657,44.470,41.168,43.01
+Min Mean Quadrant Error (%),6.088,11.725,10.238,10.899,10.913,14.350
