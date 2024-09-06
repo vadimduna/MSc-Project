@@ -19,6 +19,9 @@ main.py
 
 Additionally, the repository contains: 
 Two Jupyter Notebooks used in Google Colab for noise generation and graph creation
+
 CSV files with results 
+
 perceptual_evaluation.py - An extension of the run_localisation_evaluation function in evaluation.py that allows the  processing of the results of multiple experiments with one run
+
 Example job submission files used on the HPC
