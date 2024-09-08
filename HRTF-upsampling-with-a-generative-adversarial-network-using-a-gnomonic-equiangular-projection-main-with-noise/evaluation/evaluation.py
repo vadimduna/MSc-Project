@@ -74,7 +74,7 @@ def run_lsd_evaluation(config, sr_dir, file_ext=None, hrtf_selection=None):
             lsd_errors.append([subject_id,  float(error.detach())])
             print('LSD Error of subject %s: %0.4f' % (subject_id, float(error.detach())))
 
-#*********************Added Code to Return the mean LSD error for the personalization evaluation************************************************************************    
+#*********************Added Code to Return the Mean LSD Error for the Personalization Evaluation************************************************************************    
     mean_lsd_error = np.mean([error[1] for error in lsd_errors])
     print('Mean LSD Error: %0.3f' % mean_lsd_error)
     with open(f'{config.path}/{file_ext}', "wb") as file:
@@ -85,7 +85,7 @@ def run_lsd_evaluation(config, sr_dir, file_ext=None, hrtf_selection=None):
 #*********************End of Added Code to Return the mean LSD error for the Personalization Evaluation************************************************************************ 
 
 
-#*********************Added Code to Return For the Personalization Evaluation************************************************************************ 
+#*********************Added Code to Perform Personalization Evaluation************************************************************************ 
 def lsd_personalization_evaluation(config, sr_dir, file_ext=None):
     file_ext = 'lsd_errors.pickle' if file_ext is None else file_ext
     lsd_errors = []
@@ -131,7 +131,7 @@ def lsd_personalization_evaluation(config, sr_dir, file_ext=None):
 
     with open(f'{config.path}/{file_ext}', "wb") as file:
         pickle.dump({'lsd_errors': lsd_errors, 'overall_mean_error': overall_mean_error, 'overall_std_dev_error': overall_std_dev_error, 'mean_lsd_evaluation_error': mean_lsd_evaluation_error, 'discrepancy': discrepancy, 'discrepancy_within_std_dev': discrepancy_within_std_dev}, file)
-#*********************End of Added Code to Return For the Personalization Evaluation************************************************************************ 
+#*********************End of Added Code to Perform Personalization Evaluation************************************************************************ 
 
 def run_localisation_evaluation(config, sr_dir, file_ext=None, hrtf_selection=None):
 
