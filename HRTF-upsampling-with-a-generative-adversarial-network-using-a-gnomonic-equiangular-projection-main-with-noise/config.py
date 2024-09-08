@@ -55,9 +55,9 @@ class Config:
         self.path = f'{self.data_dirs_path}{self.runs_folder}/{self.tag}'
         self.existing_model_path = f'{self.data_dirs_path}{self.runs_folder}/{self.existing_model_tag}'
         
-#*************************Added Code to specify the valdi path in the jobs .pbs file***********************************************************************
+#*************************Added Code to Specify the Valdid Path in the Jobs .pbs file***********************************************************************
         self.valid_path = f'{self.data_dirs_path}{self.runs_folder}/{self.tag}/valid'+generated_sofa_folder_name        
-#*************************End of Added Code to specify the valdi path in the jobs .pbs file***********************************************************************
+#*************************End of Added Code to Specify the Valdid Path in the Jobs .pbs file***********************************************************************
         
         self.model_path = f'{self.data_dirs_path}{self.runs_folder}/{self.tag}'
 
