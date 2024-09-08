@@ -135,7 +135,7 @@ def main(config, mode, noise, clean_hrtf_ratio):
         if noise == "with_noise":
             _, test_prefetcher = load_dataset(config, noise_included=True, mean=None, std=None)
             print("Loaded all noisy datasets successfully.")
-#*********************End of Added Code to Train With Noisy Files************************************************************************ 
+#*********************End of Added Code to Test With Noisy Files************************************************************************ 
 
         else:
             _, test_prefetcher = load_dataset(config, mean=None, std=None)
@@ -192,7 +192,7 @@ def main(config, mode, noise, clean_hrtf_ratio):
         file_ext = f'loc_errors_hrtf_selection_maximum_data.pickle'
         run_localisation_evaluation(config, config.hrtf_selection_dir, file_ext, hrtf_selection='maximum')
 
-#*********************Added Code to Directly Create Sofa Files When HRTFs are already in a pickle format************************************************************************ 
+#*********************Added Code to Directly Create Sofa Files When HRTFs are Already in a Pickle Format************************************************************************ 
     elif mode == 'generate_sofa_files':
         projection_filename = f'{config.projection_dir}/{config.dataset}_projection_{config.hrtf_size}'
         with open(projection_filename, "rb") as file:
